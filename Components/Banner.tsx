@@ -8,7 +8,7 @@ import { FaPlay } from 'react-icons/fa'
 
 const baseUrl = 'https://image.tmdb.org/t/p/original/'
 interface Props {
-    trending: Movie[]
+    trendingNow: Movie[]
   }
   
 function Banner({trendingNow}: Props) {
@@ -20,8 +20,8 @@ function Banner({trendingNow}: Props) {
 
 
     useEffect(() => {
-        setMovie(
-          trendingNow[Math.floor(Math.random() * trendingNow.length-1)]
+        return setMovie(
+            trendingNow[Math.floor(Math.random() * trendingNow.length - 1)]
         )
         
       }, [trendingNow])
@@ -29,9 +29,9 @@ function Banner({trendingNow}: Props) {
     return (
         <div>
             <div className={bannerstyles.banner}>
-                <Image  src = {`${baseUrl}${movie?.backdrop_path || movie?.poster_path}`}
+                <Image  src={`${baseUrl}${movie?.backdrop_path || movie?.poster_path}`}
                 layout="fill"
-                objectFit='cover'></Image>
+                objectFit='cover' alt={'backdrop Image'}></Image>
                 <div className={bannerstyles.banner_contents}>
                 <h1 className={bannerstyles.banner_title}>
                    {movie?.name || movie?.title || movie?.original_name}

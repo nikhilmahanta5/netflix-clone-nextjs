@@ -10,7 +10,7 @@ import { useState } from "react";
 import Modal from '../Components/Modal'
 
 interface Props {
-  trendingNow: Movie[];
+  trendingNow: movie[];
   topRated: movie[];
   actionMovies: Movie[];
 }

@@ -75,7 +75,12 @@ function Modal() {
         </button>
 
         <div className="absolute bottom-10 flex w-full items-center justify-between px-10"></div>
+        <div className="relative">
         <img className=" w-full " src = {`${baseUrl}${movie?.backdrop_path || movie?.poster_path}`}/>
+        <div className="absolute bottom-14 left-10">
+            <h1 className="text-white "> {movie?.title}</h1>
+            </div>
+        </div>
         <div className="flex space-x-16 rounded-b-md bg-[#181818] px-10 ">
           <div className="space-y-6 text-lg">
             <div className="flex items-center space-x-2 text-sm">
@@ -88,7 +93,7 @@ function Modal() {
               <p className="w-5/6 text-white">{movie?.overview}</p>
               <div className="flex flex-col space-y-3 text-sm">
                 <div className="text-white">
-                  <span>Genres:</span>{" "}
+                  <span className="text-gray">Genres:</span>{" "}
                   {genres.map((genre) => genre.name).join(", ")}
                 </div>
 
