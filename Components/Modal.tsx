@@ -17,7 +17,7 @@ function Modal() {
 
   const [genres, setGenres] = useState<Genre[]>([]);
 
-  const [movies, setMovies] = useState<DocumentData[] | Movie[]>([]);
+  const [movies, setMovies] = useState<Document[] | Movie[]>([]);
 
   const toastStyle = {
     background: "white",

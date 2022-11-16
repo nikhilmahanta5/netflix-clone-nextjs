@@ -22,6 +22,7 @@ function Row({ title, movies }: Props) {
         {movies.map((movie) => (
           <img
             className={rowstyles.row_poster}
+            key={movie?.id}
             src={`${baseUrl}${movie?.backdrop_path || movie?.poster_path}`}
             onClick={() => {
               setCurrentMovie(movie)

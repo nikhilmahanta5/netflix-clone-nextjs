@@ -14,13 +14,13 @@ interface Props {
 function Banner({trendingNow}: Props) {
 
     const [modal, setModal] = useRecoilState(modalState);
-    const [movie, setMovie] = useState({movie:null})
+    const [movie, setMovie] = useState<Movie | null>(null);
     const [currentMovie, setCurrentMovie] = useRecoilState(movieState)
 
 
 
     useEffect(() => {
-        return setMovie(
+      setMovie(
             trendingNow[Math.floor(Math.random() * trendingNow.length - 1)]
         )
         

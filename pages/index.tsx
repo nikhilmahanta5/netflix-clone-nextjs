@@ -8,10 +8,11 @@ import { modalState } from "../atom/modalAtom";
 import {useRecoilValue} from 'recoil';
 import { useState } from "react";
 import Modal from '../Components/Modal'
+import { Movie } from "../typings";
 
 interface Props {
-  trendingNow: movie[];
-  topRated: movie[];
+  trendingNow: Movie[];
+  topRated: Movie[];
   actionMovies: Movie[];
 }
 
