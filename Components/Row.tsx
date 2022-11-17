@@ -2,8 +2,6 @@ import rowstyles from "../styles/Row.module.css";
 import { useRecoilState } from 'recoil'
 import { modalState, movieState } from "../atom/modalAtom";
 import { Movie } from '../typings'
-import { useRef, useState } from "react";
-import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/outline";
 
 const baseUrl = "https://image.tmdb.org/t/p/original/";
 
