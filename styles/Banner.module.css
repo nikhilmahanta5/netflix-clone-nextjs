@@ -40,6 +40,7 @@
     max-width: 360px;
     height: 80px;
     overflow: hidden;
+    /* text-overflow: ellipsis; */
 }
 .banner_button_play{
     cursor: pointer;

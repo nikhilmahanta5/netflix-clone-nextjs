@@ -37,7 +37,8 @@ function Banner({trendingNow}: Props) {
                    {movie?.name || movie?.title || movie?.original_name}
                 </h1>
                 <h1 className={bannerstyles.banner_description}>
-                      {movie?.overview}
+                      {movie?.overview?.length> 150? movie?.overview.slice(0,150)+" ..." : movie?.overview }
+ 
                     
                 </h1>
                 
